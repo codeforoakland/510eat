@@ -26,11 +26,7 @@
 					$result_line = array($row[11],$row[9],$row_decoded);
 					array_push($result,$result_line);
 				}
-				//{
-					//print_r($row_decoded);
-					//$result_line = array($row[8],$row[11]);
-					//array_push($result,$result_line);
-				//}
+
 			}
 			return $result;
 		}
