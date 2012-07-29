@@ -1,6 +1,6 @@
 <?php
 require ('./query.php');
-// Allows me do debug!
+// Allows me to debug!
 error_reporting(E_ALL);
 ini_set("display_errors",1);
 
@@ -16,14 +16,10 @@ if(count($results)>-1) // Handles if there is more than one result (disabled for
 	if($state = 'MORE' && strcasecmp( 'MORE' , $query )==0) // Set back to QUERY after a MORE
 	{
 		$message=$results[0].' '.$results[1];
-		$state = 'QUERY';
-		$_SESSION['query']='';
 	}
 	else // 
 	{
 		$message=$results[0]." ".$results[1];
-		$_SESSION['query'];
-		$state = 'MORE';
 	}
 }
 
@@ -41,5 +37,5 @@ header("content-type: text/xml");
 echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
 ?>
 <Response>
-	<sms><?php echo $message;?><<?php if(count($results)>1) echo ' Text MORE for more results.'; ?>/sms>
+	<sms><?php echo $message;?><?php if(count($results)>1) echo ' Text MORE for more results.'; ?></sms>
 </Response>
