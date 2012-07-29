@@ -1,5 +1,8 @@
 <?php
-require ('./query.php');
+include ("FiveOneOhEats.class.php");	
+global $fiveoneoheats;
+
+
 // Allows me to debug!
 error_reporting(E_ALL);
 ini_set("display_errors",1);
@@ -9,7 +12,7 @@ $message='Something went wrong.'; // The final message to be sent
 $query = $_POST["Body"]; // The text body of the SMS message. Up to 160 characters long.
 $pieces = explode(',', $query, 2); // Split the query into two
 // echo "lol uh oh";
-$results = get_results($pieces[0], $pieces[1]); // Pass in the data
+$results = $$fiveoneoheats->get_results($pieces[0], $pieces[1]); // Pass in the data
 
 if(count($results)>-1) // Handles if there is more than one result (disabled for now)
 {

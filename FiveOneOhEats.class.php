@@ -5,17 +5,24 @@ if (!class_exists('FiveOneOhEats')) {
     	const VERSON = '1.0';
     	
 
-		
 		function get_results($query, $street_name){
-			$json = $fiveoneoheats->do_curl_get_https("https://data.acgov.org/api/views/3d5b-2rnz/rows.json?search=burger&max_rows=25", $headers, $returnxfer = true);
+			$json = $this->do_curl_get_https("https://data.acgov.org/api/views/3d5b-2rnz/rows.json?search="."$query"."&max_rows=25", $headers, $returnxfer = true);
 			$result_data = json_decode($json); 
+			//print_r($result_data);
 			$result = array();
 			foreach ( $result_data->data as $row ) {
-				if(preg_match('/'.$street_name.'/i', $row[12][0])){
-				{
-					$result_line = array($row[8],$row[11]);
+			
+				$row_decoded = json_decode($row[12][0]);
+				$search = sprintf("/%s/i",$street_name);
+				
+				$matched = preg_match($search, $row_decoded->address);
+				
+				
+				if($matched){
+					$result_line = array($row[8],$row[11],$row[9],$row_decoded);
 					array_push($result,$result_line);
 				}
+
 			}
 			return $result;
 		}
@@ -42,10 +49,12 @@ if (!class_exists('FiveOneOhEats')) {
 			
 			return $result_json;
 		
-		}
-    	
+		}	
 		
-    }
+		function foo() {
+			return "bar";
+		}	
+		
     	
 		
     }
