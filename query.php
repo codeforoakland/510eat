@@ -8,7 +8,7 @@
  */
 
 		function get_results($query, $street_name){
-			$json = do_curl_get_https("https://data.acgov.org/api/views/3d5b-2rnz/rows.json?search=burger&max_rows=25", $headers, $returnxfer = true);
+			$json = do_curl_get_https("https://data.acgov.org/api/views/3d5b-2rnz/rows.json?search="."$query"."&max_rows=25", $headers, $returnxfer = true);
 			$result_data = json_decode($json); 
 			//print_r($result_data);
 			$result = array();
@@ -58,12 +58,4 @@
 			return $result_json;
 		
 		}
-			
-		
 ?>
-<pre>
-<?php 
-	$result = get_results('burger', 'ALVARADO NILE');
-	print_r($result);
-?>
-</pre>
