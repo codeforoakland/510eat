@@ -1,6 +1,6 @@
 
 
-h1 { font-family: 'Titillium Web', sans-serif; font-weight: 900; }
+h1 { font-family: 'Titillium Web', sans-serif; font-weight: 600; }
 
 h2 { font-family: 'Titillium Web', sans-serif; font-weight: 600; }
 
@@ -55,7 +55,7 @@ body {
 .foo-red { font-family: 'Titillium Web', sans-serif; font-weight: 600; color: #720707
  }
 
-.activity_item { height: 160px; text-align: center;  }
+.activity_item { text-align: center;  }
 
 .item_row {
     text-align: left; border: 1px solid #aaa;
