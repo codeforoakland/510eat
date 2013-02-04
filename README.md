@@ -22,3 +22,7 @@ Green, Yellow and Red - those are the colors of the placards that will be posted
 Pass (green), Conditional Pass (yellow), and Closed (red) placards will rank the food safety status of food facilities inspected after July 1, 2012. Initially, foodservice operations at restaurants, school cafeterias, healthcare facilities, commissaries, supermarkets and bakeries will receive placards after a routine inspection is conducted. Mobile food and prepackaged facilities will be posted later in the year. The placards are to be posted at or near the entrance of the facility in public view.
 
 http://www.acgov.org/aceh/food/grading.htm
+
+Requirements
+-------------
+https://github.com/aparo/pyes

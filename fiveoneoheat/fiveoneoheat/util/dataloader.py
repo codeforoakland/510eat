@@ -3,11 +3,10 @@ import json
 import csv, sys
 import uuid
 import re
-import time
-from datetime import timedelta
 import hashlib
 from isounidecode import unidecode
 from pyes import *
+from django.conf import settings
 
 class DataLoader():
 
@@ -31,10 +30,10 @@ class DataLoader():
                   ['grade','STRING'],
                   ['address','STRING']]
 
-        infile = '/Users/claygraham/data/github/510eat/fiveoneoheat/static/data/alameda_county_restaurants_inspections_n.csv'
+        infile = '{0}/data/alameda_county_restaurants_inspections_n.csv'.format(settings.STATICFILES_DIRS[0])
         f = open(infile, 'U')
 
-        outfile  = '/Users/claygraham/data/github/510eat/fiveoneoheat/static/data/alameda_county_restaurants_inspections_cleaned.json'
+        outfile  = '{0}/data/alameda_county_restaurants_inspections_cleaned.json'.format(settings.STATICFILES_DIRS[0])
         fout = open(outfile, 'w')
 
         #for each row in the csv
@@ -104,7 +103,7 @@ class DataLoader():
             fout.close()
 
     def load_inspections(self):
-        infile = '/Users/claygraham/data/github/510eat/fiveoneoheat/static/data/alameda_county_restaurants_inspections_cleaned.json'
+        infile = '{0}/data/alameda_county_restaurants_inspections_cleaned.json'.format(settings.STATICFILES_DIRS[0])
         #load_index_json(self, infile, index_id, mapping_id, mapping=None, delete_index=True)
         self.load_index_json(
             infile=infile,
