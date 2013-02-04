@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+{% include 'head.html' %}
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#search_name_area').fooeSearchByNameForm({
+            endpoint:'{% url search_name_json %}'
+        });
+    });
+</script>
+<body>
+<div class="container-narrow">
+
+    {% include 'header.html' %}
+
+    <hr>
+
+    <div class="row-fluid marketing">
+       <div class="span12" style="text-align: center;">
+           <h1>Search By Name</h1>
+            <div id="search_name_area"></div>
+       </div>
+
+    </div>
+
+    <hr>
+
+    {% include 'footer.html' %}
+
+</div> <!-- /container -->
+
+
+
+</body>
+</html>

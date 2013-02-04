@@ -1,0 +1,111 @@
+
+
+h1 { font-family: 'Titillium Web', sans-serif; font-weight: 900; }
+
+h2 { font-family: 'Titillium Web', sans-serif; font-weight: 600; }
+
+h3 { font-family: 'Titillium Web', sans-serif; font-weight: 600; }
+
+h4 { font-family: 'Titillium Web', sans-serif; font-weight: 600; }
+
+body {
+    font-family: 'Titillium Web', sans-serif; font-weight: 400;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+
+/* Custom container */
+.container-narrow {
+    margin: 0 auto;
+    max-width: 700px;
+}
+.container-narrow > hr {
+    margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+    margin: 60px 0;
+    text-align: center;
+}
+.jumbotron h1 {
+    font-size: 72px;
+    line-height: 1;
+}
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+}
+
+/* Supporting marketing content */
+.marketing {
+    margin: 60px 0;
+}
+.marketing p + h4 {
+    margin-top: 28px;
+}
+
+.foo-green { font-family: 'Titillium Web', sans-serif; font-weight: 600; color: #147216
+}
+
+.foo-yellow { font-family: 'Titillium Web', sans-serif; font-weight: 600; color: #877210
+}
+
+.foo-red { font-family: 'Titillium Web', sans-serif; font-weight: 600; color: #720707
+ }
+
+.activity_item { height: 160px; text-align: center;  }
+
+.item_row {
+    text-align: left; border: 1px solid #aaa;
+    width: 100%; margin-top: 5px; padding: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+}
+.item_location { width: 25% ; height: 100%; display: inline-block; vertical-align: top; margin-right: 5px; }
+.item_name { font-size: 1.2em; font-weight: 600;}
+.item_address { font-size: 0.9em; color: #666 }
+
+.item_inspections{width: 70%; display: inline-block;}
+
+.item_inspection{display: inline-block; width: 100%;}
+
+.item_description {
+    vertical-align: top;
+    height: 100%;display: inline-block;}
+
+.item_grade-G {
+    width:64px;
+    height:64px;
+    display: inline-block;
+    background-image:url('../img/marker-G-64.png');
+    float: right;
+}
+
+.item_grade-Y {
+    width:64px;
+    height:64px;
+    display: inline-block;
+    background-image:url('../img/marker-Y-64.png');
+    float: right;
+}
+
+.item_grade-R {
+    width:64px;
+    height:64px;
+    display: inline-block;
+    background-image:url('../img/marker-R-64.png');
+    float: right;
+}
+
+.footer {
+    text-align: center;
+    display: inline;
+    vertical-align: top;
+    height: 40px;
+}
+
+

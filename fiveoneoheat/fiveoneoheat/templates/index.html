@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+{% include 'head.html' %}
+<body>
+
+<div class="container-narrow">
+
+    {% include 'header.html' %}
+
+    <hr style="width: 100%;">
+
+    <div class="jumbotron">
+        <div><img src="{{ STATIC_URL }}img/fiveoneoheat-logo.png"/></div>
+        <h1>Does your East Bay eatery make the grade?</h1>
+        <p class="lead">510eat.org is the only website that uses data from the
+            <a href="http://www.acgov.org/aceh/food/grading.htm" target="_new">Alameda County Restaurant Grading System</a>
+            to give you a simple maps and searches of <span class="foo-green">Green</span>,
+            <span class="foo-yellow">Yellow</span> and <span class="foo-red">Red</span> inspection results.</p>
+    </div>
+
+    <hr style="width: 100%;">
+
+    <div class="row-fluid" style="height: 400px;">
+        <div class="span6">
+            <div class="activity_item">
+                <h3>Search By Name</h3>
+                <div><img class="img-polaroid" src="{{ STATIC_URL }}img/thumb-feature-search-name.png"/></div>
+                <p>Enter the name of the restaurant, deli, or market  you are interested in and see a simple list of results.</p>
+                <a href="{% url fiveoneoheat.views.search_name %}" class="btn btn-primary">Search Now!</a>
+            </div>
+        </div>
+
+        <div class="span6">
+            <div class="activity_item">
+                <h3>Browse Map</h3>
+                <div><img class="img-polaroid" src="{{ STATIC_URL }}img/thumb-feature-browse-map.png"/></div>
+                <p>See a map of all of Oakland and browse it as you wish, drill down and explore. Recommended for web users.</p>
+                <a href="{% url fiveoneoheat.views.map_browse %}" class="btn btn-primary">Show Map!</a>
+            </div>
+        </div>
+    </div>
+
+    <hr style="width: 100%;">
+
+    {% include 'footer.html' %}
+
+</div> <!-- /container -->
+
+
+
+</body>
+</html>

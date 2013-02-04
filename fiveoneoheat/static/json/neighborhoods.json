@@ -1,0 +1,77 @@
+[
+    {
+        "name":"Uptown",
+        "location":[37.811411,-122.266781],
+        "r":0.5
+    },
+    {
+        "name":"Downtown",
+        "location":[37.803562,-122.271652],
+        "r":0.5
+    },
+    {
+        "name":"Jack London",
+        "location":[37.795373,-122.276781],
+        "r":0.5
+    },
+    {
+        "name":"Lakeshore",
+        "location":[37.811327,-122.246311],
+        "r":0.5
+    },
+    {
+        "name":"Temescal",
+        "location":[37.836327,-122.262517],
+        "r":0.5
+    },
+    {
+        "name":"Montclair",
+        "location":[37.826752,-122.209618],
+        "r":0.5
+    },
+    {
+        "name":"Dimond",
+        "location":[37.800527,-122.215734],
+        "r":0.5
+    },
+    {
+        "name":"Emeryville",
+        "location":[37.831412,-122.285557],
+        "r":0.5
+    },
+    {
+        "name":"Castro Valley",
+        "location":[37.695401,-122.080421],
+        "r":0.75
+    },
+    {
+        "name":"Alameda",
+        "location":[37.765982,-122.243264],
+        "r":0.75
+    },
+    {
+        "name":"Alameda",
+        "location":[37.765982,-122.243264],
+        "r":0.75
+    },
+    {
+        "name":"Livermore",
+        "location":[37.681875,-121.768009],
+        "r":0.75
+    },
+    {
+        "name":"Fremont",
+        "location":[37.54827,-121.988572],
+        "r":0.75
+    }
+
+
+
+
+
+
+
+
+
+
+]

@@ -1,0 +1,8 @@
+<div class="masthead">
+    <ul class="nav nav-pills pull-right">
+        <li class="active"><a href="{% url site_landing %}">Home</a></li>
+        <li><a href="{% url fiveoneoheat.views.search_name %}">Search By Name</a></li>
+        <li><a href="{% url fiveoneoheat.views.map_browse %}">Browse Map</a></li>
+    </ul>
+    <a href="{% url site_landing %}"><img src="{{ STATIC_URL }}img/fiveoneoheat-topbar.png"/></a>
+</div>

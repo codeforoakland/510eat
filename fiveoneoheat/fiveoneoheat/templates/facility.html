@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+{% include "head.html" %}
+<body>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#map_area').fooeFacilityMap({
+            endpoint:'{% url map_browse_json %}',
+            location:new google.maps.LatLng({{ facility.location.lat }}, {{ facility.location.lon }}),
+            grade:'{{ facility.document.inspections.0.grade }}',
+            zoom:16,
+            static_url:{{ STATIC_URL }}
+        });
+    });
+</script>
+<div class="container-narrow">
+
+    {% include "header.html" %}
+
+    <hr>
+
+
+    <div class="row-fluid" style="text-align: center; margin-bottom: 10px;">
+        <h1>{{ facility.document.facility_name }}</h1>
+    </div>
+    <div class="row-fluid" style="margin-bottom: 10px;">
+        <div class="item_row"><div class="item_location">
+            <div class="item_name">{{facility.document.facility_name}}</div>
+            <div class="item_address">{{facility.document.address}}</div></div>
+            <div class="item_inspections">{% for inspection in facility.document.inspections %}
+                <div class="item_inspection">
+                    <div style="display:inline-block;"><strong>{{inspection.activity_date}}</strong></br><ul>
+                        {% for violation in inspection.violation_descriptions %}
+                        <li>{{ violation }}</li>
+                        {% endfor %}
+                    </ul></div>
+                    <div class="item_grade-{{inspection.grade}}">&nbsp;</div>
+                    </div>
+                {% endfor %}
+            </div>
+            </div>
+
+    </div>
+    <div class="row-fluid" style="text-align: center; margin-bottom: 10px;">
+        <div style="width:100%;height:100%" id="map_area"></div>
+    </div>
+    <div class="row-fluid" style="text-align: center; margin-bottom: 10px;">
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = '510eat-org'; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </div>
+
+    <hr>
+    {% include "footer.html" %}
+
+
+
+</div> <!-- /container -->
+
+
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+{% include 'head.html' %}
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#map_area').fooeBrowseMap({
+            endpoint:'{% url map_browse_json %}',
+            location:new google.maps.LatLng(37.811080264089874, -122.26691648086924),
+            zoom:15,
+            static_url:{{ STATIC_URL }}
+        });
+    });
+</script>
+<body>
+
+<div class="container-narrow">
+    {% include 'header.html' %}
+    <div style="width:100%;height:100%" id="map_area"></div>
+
+    <hr>
+    {% include 'footer.html' %}
+</div> <!-- /container -->
+
+</body>
+</html>
