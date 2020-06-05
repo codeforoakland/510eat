@@ -1,4 +1,4 @@
-Django==1.4.1
+Django==1.11.29
 distribute==0.6.15
 elementtree==1.2.7-20070827-preview
 feedparser==5.1.2
